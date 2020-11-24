@@ -4,10 +4,8 @@
     <title>Coronavirus PHE Data</title>
     <meta http-equiv="Cache-Control" content="no-store" />
     <link href="styles.css" rel="stylesheet" crossorigin="anonymous">
-    <!--<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
-
     <script src="https://connectors.tableau.com/libs/tableauwdc-2.3.latest.js" type="text/javascript"></script>
     <script src="coronavirusWDC.js" type="text/javascript"></script>
 </head>
@@ -18,14 +16,13 @@
             
             <div class="text-center col-md-5 col-md-offset-4 fonts">
                 <div class="imgcontainer">
-                    <img src="COVID_ICON_GREY.png" alt="covid icon" height ="150" class="center">
+                    <img src="covid_icon_grey_line.png" alt="covid icon" height ="175" class="center">
                 </div>
                 <br>
                 <b><p style="font-size: 25px">Coronavirus Data for England, Wales, Scotland & Northern Ireland</b></p>
                 <br><p style="font-size: 14px">This Web Data Connector will collect data from the 
-                    <a href="https://coronavirus.data.gov.uk/">coronavirus.data.gov.uk</a> API and return the results in the 4 tables 
+                    <a href="https://coronavirus.data.gov.uk/">coronavirus.data.gov.uk</a> API and return the results in the 4 individual tables 
                     listed below.
-                    <br>A list of the available data items and their corresponding data types are displayed underneath the table names.
                     <br>
                     <br>
                     <div id="centre">
@@ -35,18 +32,20 @@
                         <div id="fourth" class="box2" style="font-size: 11px;">Lower Tier Local Authority</div>
                         <div id="clear"></div>
                     </div>
+                    <br><p style="font-size: 14px" class="center">A list of the available data items and their corresponding data types can be shown/hidden by clicking the button below
                     <br>
-                    <div class="center box">
+                    <br><button type="button" class="button1" style="margin: 10px; font-size: 11px;" onclick="showDataItemsBox()">Show/Hide Data Items Table</button></p>
+                    <div id="dataItemsBox" class="center box" style="display: none">
                         <div style="background-color: #f1f1f1; padding: 5px"><p style="font-size: 20px" class="center"><b>Data Items / Types</p></b></div>
                         <div class="row" style="font-size: 11px; padding: 1px;">
                             <div class="column"><li>areaType (string)<li>areaName (string)<li>areaCode (string)
-                            <li>date (date)<li>hash (string)<li>newCasesByPublishDate (int)*<li>cumCasesByPublishDate (int)*
+                            <li>date (date)<li>hash (string)<li>newCasesByPublishDate (int)<li>cumCasesByPublishDate (int)
                                 <li>cumCasesBySpecimenDateRate (int)<li>newCasesBySpecimenDate (int)<li>cumCasesBySpecimenDateRate (int)
-                                    <li>cumCasesBySpecimenDate (int)<li>maleCases (int)</li>
-                                    <br>
-                                    <br>*only available in the 'Nations' table
-                            </div>
-                            <div class="column"><li>femaleCases (int)<li>newPillarOneTestsByPublishDate (int)<li>cumPillarOneTestsByPublishDate (int)
+                                    <li>cumCasesBySpecimenDate (int)<li>maleCasesbyage (int)*<li>maleRatesbyage (int)*</li>
+                            <br>
+                            <br>*Cases/rates by sex broken down by 5-year age groups
+                                </div>
+                            <div class="column"><li>femaleCasesbyage (int)*<li>femaleRatesbyage (int)*<li>newPillarOneTestsByPublishDate (int)<li>cumPillarOneTestsByPublishDate (int)
                                 <li>newPillarTwoTestsByPublishDate (int)<li>cumPillarTwoTestsByPublishDate (int)<li>newPillarThreeTestsByPublishDate (int)
                                     <li>cumPillarThreeTestsByPublishDate (int)<li>newPillarFourTestsByPublishDate (int)<li>cumPillarFourTestsByPublishDate (int)
                                         <li>newAdmissions (int)<li>cumAdmissions (int)<li>cumAdmissionsByAge (int)</li>
@@ -55,24 +54,21 @@
                                 <li>hospitalCases (int)<li>plannedCapacityByPublishDate (int)<li>newDeaths28DaysByPublishDate (int)
                                     <li>cumDeaths28DaysByPublishDate (int)<li>cumDeaths28DaysByPublishDateRate (int)<li>newDeaths28DaysByDeathDate (int)
                                         <li>cumDeaths28DaysByDeathDate (int)<li>cumDeaths28DaysByDeathDateRate (int)</li>
+                                    <br>
+                                    <br>
+                                    <br><p style="text-align: right;"><b>NB: </b>Some data is not available across all geographic regions<p>
                             </div>
-                            
-                            <!--
-                            <div class="column"><li>Area Name (string)</li></div>
-                            <div class="column"><li>New Cases (int)</li></div>
-                            <div class="column">Value (int)</div><p style="font-size: 11px" class="center"></p>-->
                         </div>
-
                     </div>
-                <br><p class="center">Click on the button below to retrieve the data:
+                <p class="center">Click on the button below to retrieve the data:
                 <br>&darr;
                 <br>
-                <button type="button" id="submitButton" class="btn btn-success" style="margin: 10px; font-size: 17px;">Get Coronavirus Data!</button></p>
+                <button type="button" id="submitButton" class="btn btn-success" style="margin: 10px; font-size: 20px; font-weight: bold;">Get Coronavirus Data!</button></p>
                 <br></p>
                 <div class="imgcontainer">
-                    <img src="team_logo_light_background.png" alt="covid icon" height ="75" class="center">
+                    <img src="team_logo_light_background.png" alt="team logo" height ="75" class="center">
                 </div>
-                <p style="font-size: 10px">Developed by <a href="https://www.linkedin.com/in/eric-mahendren-63000482">Eric Mahendren</a> & <a href="https://twitter.com/data_and_stuff">James Goodall</a></p>
+                <p style="font-size: 10px">Developed by <a href="https://www.linkedin.com/in/eric-mahendren-63000482">Eric Mahendren</a> & <a href="https://twitter.com/data_and_stuff">James Goodall</a>, Surrey County Council</p>
             </div>
         </div>
     </div>

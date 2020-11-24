@@ -7,19 +7,19 @@
 			schema = JSON.parse(response)
 	
 			var regionTableSchema = {
-				id: "regional",
+				id: "regions",
 				columns: schema.cols
 			};		
 			var nationalTableSchema = {
-				id: "national",
+				id: "nations",
 				columns: schema.cols
 			};		
 			var utlaTableSchema = {
-				id: "utla",
+				id: "upper_tier_local_authority",
 				columns: schema.cols
 			};
 			var ltlaTableSchema = {
-				id: "ltla",
+				id: "lower_tier_local_authority",
 				columns: schema.cols
 			};		
 			schemaCallback([nationalTableSchema, regionTableSchema, utlaTableSchema, ltlaTableSchema])
@@ -34,7 +34,7 @@
 			var utlaNames = data.utla; 
 			var ltlaNames = data.ltla; 
 			
-			if (table.tableInfo.id == 'national') {
+			if (table.tableInfo.id == 'nations') {
 				var nationalCount = 0;
 				for (var n = 0; n < nationNames.length; n++) {
 					var endpoint = 
@@ -168,7 +168,7 @@
 						console.log(nationNames.length, nationalCount)
 					};
 				});
-			}} else if (table.tableInfo.id == 'ltla') {
+			}} else if (table.tableInfo.id == 'lower_tier_local_authority') {
 				var ltlaCount = 0;
 				for (var l = 0; l < ltlaNames.length; l++) {
 					var endpoint = 
@@ -302,7 +302,7 @@
 						console.log(ltlaCount.length, ltlaCount)
 					};
 				});
-			}} else if (table.tableInfo.id == 'utla') {
+			}} else if (table.tableInfo.id == 'upper_tier_local_authority') {
 				var utlaCount = 0;
 				for (var u = 0; u < utlaNames.length; u++) {
 					var endpoint = 
@@ -437,7 +437,7 @@
 					};
 				});
 			}} 
-			else if (table.tableInfo.id == 'regional') {
+			else if (table.tableInfo.id == 'regions') {
 				var regionCount = 0;
 				for (var r = 0; r < regionNames.length; r++) {
 					var endpoint = 
@@ -608,3 +608,11 @@ $(document).ready(function () {
 	});
 });		
 })();
+function showDataItemsBox() {
+    var x = document.getElementById("dataItemsBox");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
