@@ -1,13 +1,9 @@
-/* Bordered form */
-form {
-    border: 3px solid #f1f1f1;
-}
 
 .fonts {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-P { text-align: center }
+p { text-align: center }
 
 
 /* Set a style for all buttons */
@@ -19,12 +15,13 @@ button {
     border: none;
     cursor: pointer;
     width: 350px;
-    height: 70px
+    height: 70px;
+    border-radius: 12px;
 }
 
 .button1 {
     position: static;
-    background-color: #256884;
+    background-color: #000000;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -32,6 +29,8 @@ button {
     cursor: pointer;
     height: 50px;
     width: 170px;
+    border-radius: 12px;
+    text-align: center;
 }
 
 /* Add a hover effect for buttons */
@@ -69,7 +68,7 @@ div.box {
     margin: 30px;
     border: 1px solid grey;
     padding: 5px;
-    width: 770px;
+    width: 760px;
     left: 0;
 	right: 0;
   	
