@@ -1,0 +1,159 @@
+/* Bordered form */
+form {
+    border: 3px solid #f1f1f1;
+}
+
+.fonts {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+P { text-align: center }
+
+
+/* Set a style for all buttons */
+button {
+    background-color: #000000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 350px;
+    height: 70px
+}
+
+.button1 {
+    position: static;
+    background-color: #256884;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    width: 170px;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+    opacity: 0.6;
+}
+
+.column {
+    float: left;
+    width: 30%;
+    padding: 10px;
+    top: 0;
+    bottom: 0;
+  }
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+/* Center the image inside this container */
+}
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+div.box {
+    margin: 30px;
+    border: 1px solid grey;
+    padding: 5px;
+    width: 770px;
+    left: 0;
+	right: 0;
+  	
+	margin: auto;
+  }
+
+  div.box2 {
+    position: static;
+    text-align: center;
+    background-color: #256884;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: auto;
+    height: 20px;
+    line-height: 20px;
+    width: 130px;
+}
+#centre {
+    width: 100%;
+    text-align: center;
+}
+
+#first {
+    position: static;
+    text-align: center;
+    background-color: #256884;
+    color: white;
+    padding: 14px;
+    margin: 8px;
+    border: none;
+    cursor: auto;
+    height: 20px;
+    line-height: 20px;
+    width: 130px;
+    display: inline-block;
+    margin: 5px auto;
+}
+#second {
+    position: static;
+    text-align: center;
+    background-color: #256884;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px;
+    border: none;
+    cursor: auto;
+    height: 20px;
+    line-height: 20px;
+    width: 130px;
+    display: inline-block;
+    margin: 5px auto;
+}
+#third {
+    position: static;
+    text-align: center;
+    background-color: #256884;
+    color: white;
+    padding: 14px;
+    margin: 8px;
+    border: none;
+    cursor: auto;
+    height: 20px;
+    line-height: 20px;
+    width: 130px;
+    display: inline-block;
+    margin: 5px auto;
+}
+#fourth {
+    position: static;
+    text-align: center;
+    background-color: #256884;
+    color: white;
+    padding: 14px;
+    margin: 8px;
+    border: none;
+    cursor: auto;
+    height: 20px;
+    line-height: 20px;
+    width: 130px;
+    display: inline-block;
+    margin: 5px auto;
+}
+#clear {
+    clear: both;
+}
