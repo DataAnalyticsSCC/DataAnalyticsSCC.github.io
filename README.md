@@ -15,6 +15,8 @@ Data will be returned in 4 tables:
 
 Simply enter the following URL into the Web Data Connector in Tableau and click 'Get Coronavirus Data':
 
+https://dataanalyticsscc.github.io/
+
 ## Local Development
 
 ### Dependencies
