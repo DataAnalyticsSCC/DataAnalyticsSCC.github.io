@@ -1,5 +1,5 @@
 <p align = "center">
-  <img src="https://github.com/DataAnalyticsSCC/DataAnalyticsSCC.github.io/blob/main/covid_icon_grey_line.png" alt="covid icon" width="700" height="170">
+  <img src="https://github.com/DataAnalyticsSCC/DataAnalyticsSCC.github.io/blob/main/covid_icon_grey_line.png" alt="covid icon" width="400" height="100">
 </p>
 
 # UK Coronavirus Tableau Web Data Connector
