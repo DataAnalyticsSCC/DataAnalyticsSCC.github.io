@@ -17,6 +17,8 @@ Simply enter the following URL into the Web Data Connector in Tableau and click 
 
 https://dataanalyticsscc.github.io/index.html
 
+<b>NOTE:</b> This WDC was built & tested in Tableau version 2020.2 & may not be compatible with previous versions
+
 ## Local Development
 
 ### Dependencies
