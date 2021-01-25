@@ -451,3 +451,11 @@ $(document).ready(function () {
 	});
 });		
 })();
+function showDataItemsBox() {
+    var x = document.getElementById("dataItemsBox");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
