@@ -1,5 +1,5 @@
 {
-    "cols" : [
+    "nations" : [
         {
             "id" : "date",
             "dataType": "date"
@@ -455,16 +455,6 @@
             "dataType": "float"
         },   
         {
-            "id" : "newPillarFourTestsByPublishDate",
-            "alias": "newPillarFourTestsByPublishDate",
-            "dataType": "float"
-        },    
-        {
-            "id" : "cumPillarFourTestsByPublishDate",
-            "alias": "cumPillarFourTestsByPublishDate",
-            "dataType": "float"
-        },   
-        {
             "id" : "newAdmissions",
             "alias": "newAdmissions",
             "dataType": "float"
@@ -485,11 +475,6 @@
             "dataType": "float"
         }, 
         {
-            "id" : "newTestsByPublishDate",
-            "alias": "newTestsByPublishDate",
-            "dataType": "float"
-        }, 
-        {
             "id" : "covidOccupiedMVBeds",
             "alias": "covidOccupiedMVBeds",
             "dataType": "float"
@@ -499,11 +484,6 @@
             "alias": "hospitalCases",
             "dataType": "float"
         }, 
-        {
-            "id" : "plannedCapacityByPublishDate",
-            "alias": "plannedCapacityByPublishDate",
-            "dataType": "float"
-        },  
         {
             "id" : "newDeaths28DaysByPublishDate",
             "alias": "newDeaths28DaysByPublishDate",
@@ -519,6 +499,548 @@
             "alias": "newDeaths28DaysByDeathDate",
             "dataType": "float"
         },  
+        {
+            "id" : "cumDeaths28DaysByDeathDate",
+            "alias": "cumDeaths28DaysByDeathDate",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "cumDeaths28DaysByDeathDateRate",
+            "alias": "cumDeaths28DaysByDeathDateRate",
+            "dataType": "float"
+        },
+        {
+            "id" : "plannedCapacityByPublishDate",
+            "alias": "plannedCapacityByPublishDate",
+            "dataType": "float"
+        },  
+        {
+            "id" : "newPillarFourTestsByPublishDate",
+            "alias": "newPillarFourTestsByPublishDate",
+            "dataType": "float"
+        },    
+        {
+            "id" : "cumPillarFourTestsByPublishDate",
+            "alias": "cumPillarFourTestsByPublishDate",
+            "dataType": "float"
+        }  
+    ],
+    "regions" : [
+        {
+            "id" : "date",
+            "dataType": "date"
+        }, 
+        {
+            "id" : "newCases",
+            "alias": "newCases",
+            "dataType": "float"
+        },
+        {
+            "id" : "areaType",
+            "alias": "areaType",
+            "dataType": "string"
+        },
+        {
+            "id" : "areaName",
+            "alias": "areaName",
+            "dataType": "string"
+        }, 
+        {
+			"id": "areaCode",
+			"alias": "areaCode",
+			"dataType": "string"
+		},               
+        {
+			"id": "hash",
+			"alias": "hash",
+			"dataType": "string"
+        }, 
+        {
+            "id" : "cumCasesBySpecimenDateRate",
+            "alias": "cumCasesBySpecimenDateRate",
+            "dataType": "float"
+        },
+        {
+            "id" : "newCasesBySpecimenDate",
+            "alias": "newCasesBySpecimenDate",
+            "dataType": "float"
+        },        
+        {
+            "id" : "cumCasesBySpecimenDate",
+            "alias": "cumCasesBySpecimenDate",
+            "dataType": "float"
+        },               
+        {
+            "id" : "female_0_to_4_value",
+            "alias": "female_0_to_4_value",
+            "dataType": "float"
+        },           
+        {
+            "id" : "female_5_to_9_value",
+            "alias": "female_5_to_9_value",
+            "dataType": "float"
+        },          
+        {
+            "id" : "female_10_to_14_value",
+            "alias": "female_10_to_14_value",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "female_15_to_19_value",
+            "alias": "female_15_to_19_value",
+            "dataType": "float"
+        },                                      
+        {
+            "id" : "female_20_to_24_value",
+            "alias": "female_20_to_24_value",
+            "dataType": "float"
+        },
+        {
+            "id" : "female_25_to_29_value",
+            "alias": "female_25_to_29_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_30_to_34_value",
+            "alias": "female_30_to_34_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_35_to_39_value",
+            "alias": "female_35_to_39_value",
+            "dataType": "float"
+        },     
+        {
+            "id" : "female_40_to_44_value",
+            "alias": "female_40_to_44_value",
+            "dataType": "float"
+        },
+        {
+            "id" : "female_45_to_49_value",
+            "alias": "female_45_to_49_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_50_to_54_value",
+            "alias": "female_50_to_54_value",
+            "dataType": "float"
+        },
+        {
+            "id" : "female_55_to_59_value",
+            "alias": "female_55_to_59_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_60_to_64_value",
+            "alias": "female_60_to_64_value",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "female_65_to_69_value",
+            "alias": "female_65_to_69_value",
+            "dataType": "float"
+        },
+        {
+            "id" : "female_70_to_74_value",
+            "alias": "female_70_to_74_value",
+            "dataType": "float"
+        },        
+        {
+            "id" : "female_75_to_79_value",
+            "alias": "female_75_to_79_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_80_to_84_value",
+            "alias": "female_80_to_84_value",
+            "dataType": "float"
+        },                                                          
+        {
+            "id" : "female_85_to_89_value",
+            "alias": "female_85_to_89_value",
+            "dataType": "float"
+        },       
+        {
+            "id" : "female_90plus_value",
+            "alias": "female_90plus_value",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "female_0_to_4_rate",
+            "alias": "female_0_to_4_rate",
+            "dataType": "float"
+        },           
+        {
+            "id" : "female_5_to_9_rate",
+            "alias": "female_5_to_9_rate",
+            "dataType": "float"
+        },          
+        {
+            "id" : "female_10_to_14_rate",
+            "alias": "female_10_to_14_rate",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "female_15_to_19_rate",
+            "alias": "female_15_to_19_rate",
+            "dataType": "float"
+        },                                      
+        {
+            "id" : "female_20_to_24_rate",
+            "alias": "female_20_to_24_rate",
+            "dataType": "float"
+        },
+        {
+            "id" : "female_25_to_29_rate",
+            "alias": "female_25_to_29_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_30_to_34_rate",
+            "alias": "female_30_to_34_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_35_to_39_rate",
+            "alias": "female_35_to_39_rate",
+            "dataType": "float"
+        },     
+        {
+            "id" : "female_40_to_44_rate",
+            "alias": "female_40_to_44_rate",
+            "dataType": "float"
+        },
+        {
+            "id" : "female_45_to_49_rate",
+            "alias": "female_45_to_49_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_50_to_54_rate",
+            "alias": "female_50_to_54_rate",
+            "dataType": "float"
+        },
+        {
+            "id" : "female_55_to_59_rate",
+            "alias": "female_55_to_59_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_60_to_64_rate",
+            "alias": "female_60_to_64_rate",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "female_65_to_69_rate",
+            "alias": "female_65_to_69_rate",
+            "dataType": "float"
+        },
+        {
+            "id" : "female_70_to_74_rate",
+            "alias": "female_70_to_74_rate",
+            "dataType": "float"
+        },        
+        {
+            "id" : "female_75_to_79_rate",
+            "alias": "female_75_to_79_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "female_80_to_84_rate",
+            "alias": "female_80_to_84_rate",
+            "dataType": "float"
+        },                                                          
+        {
+            "id" : "female_85_to_89_rate",
+            "alias": "female_85_to_89_rate",
+            "dataType": "float"
+        },       
+        {
+            "id" : "female_90plus_rate",
+            "alias": "female_90plus_rate",
+            "dataType": "float"
+        },                           
+        {
+            "id" : "male_0_to_4_value",
+            "alias": "male_0_to_4_value",
+            "dataType": "float"
+        },           
+        {
+            "id" : "male_5_to_9_value",
+            "alias": "male_5_to_9_value",
+            "dataType": "float"
+        },          
+        {
+            "id" : "male_10_to_14_value",
+            "alias": "male_10_to_14_value",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "male_15_to_19_value",
+            "alias": "male_15_to_19_value",
+            "dataType": "float"
+        },                                      
+        {
+            "id" : "male_20_to_24_value",
+            "alias": "male_20_to_24_value",
+            "dataType": "float"
+        },
+        {
+            "id" : "male_25_to_29_value",
+            "alias": "male_25_to_29_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_30_to_34_value",
+            "alias": "male_30_to_34_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_35_to_39_value",
+            "alias": "male_35_to_39_value",
+            "dataType": "float"
+        },     
+        {
+            "id" : "male_40_to_44_value",
+            "alias": "male_40_to_44_value",
+            "dataType": "float"
+        },
+        {
+            "id" : "male_45_to_49_value",
+            "alias": "male_45_to_49_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_50_to_54_value",
+            "alias": "male_50_to_54_value",
+            "dataType": "float"
+        },
+        {
+            "id" : "male_55_to_59_value",
+            "alias": "male_55_to_59_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_60_to_64_value",
+            "alias": "male_60_to_64_value",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "male_65_to_69_value",
+            "alias": "male_65_to_69_value",
+            "dataType": "float"
+        },
+        {
+            "id" : "male_70_to_74_value",
+            "alias": "male_70_to_74_value",
+            "dataType": "float"
+        },        
+        {
+            "id" : "male_75_to_79_value",
+            "alias": "male_75_to_79_value",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_80_to_84_value",
+            "alias": "male_80_to_84_value",
+            "dataType": "float"
+        },                                                          
+        {
+            "id" : "male_85_to_89_value",
+            "alias": "male_85_to_89_value",
+            "dataType": "float"
+        },       
+        {
+            "id" : "male_90plus_value",
+            "alias": "male_90plus_value",
+            "dataType": "float"
+        },  
+        {
+            "id" : "male_0_to_4_rate",
+            "alias": "male_0_to_4_rate",
+            "dataType": "float"
+        },           
+        {
+            "id" : "male_5_to_9_rate",
+            "alias": "male_5_to_9_rate",
+            "dataType": "float"
+        },          
+        {
+            "id" : "male_10_to_14_rate",
+            "alias": "male_10_to_14_rate",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "male_15_to_19_rate",
+            "alias": "male_15_to_19_rate",
+            "dataType": "float"
+        },                                      
+        {
+            "id" : "male_20_to_24_rate",
+            "alias": "male_20_to_24_rate",
+            "dataType": "float"
+        },
+        {
+            "id" : "male_25_to_29_rate",
+            "alias": "male_25_to_29_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_30_to_34_rate",
+            "alias": "male_30_to_34_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_35_to_39_rate",
+            "alias": "male_35_to_39_rate",
+            "dataType": "float"
+        },     
+        {
+            "id" : "male_40_to_44_rate",
+            "alias": "male_40_to_44_rate",
+            "dataType": "float"
+        },
+        {
+            "id" : "male_45_to_49_rate",
+            "alias": "male_45_to_49_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_50_to_54_rate",
+            "alias": "male_50_to_54_rate",
+            "dataType": "float"
+        },
+        {
+            "id" : "male_55_to_59_rate",
+            "alias": "male_55_to_59_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_60_to_64_rate",
+            "alias": "male_60_to_64_rate",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "male_65_to_69_rate",
+            "alias": "male_65_to_69_rate",
+            "dataType": "float"
+        },
+        {
+            "id" : "male_70_to_74_rate",
+            "alias": "male_70_to_74_rate",
+            "dataType": "float"
+        },        
+        {
+            "id" : "male_75_to_79_rate",
+            "alias": "male_75_to_79_rate",
+            "dataType": "float"
+        },   
+        {
+            "id" : "male_80_to_84_rate",
+            "alias": "male_80_to_84_rate",
+            "dataType": "float"
+        },                                                          
+        {
+            "id" : "male_85_to_89_rate",
+            "alias": "male_85_to_89_rate",
+            "dataType": "float"
+        },       
+        {
+            "id" : "male_90plus_rate",
+            "alias": "male_90plus_rate",
+            "dataType": "float"
+        },              
+        {
+            "id" : "newDeaths28DaysByPublishDate",
+            "alias": "newDeaths28DaysByPublishDate",
+            "dataType": "float"
+        },  
+        {
+            "id" : "cumDeaths28DaysByPublishDate",
+            "alias": "cumDeaths28DaysByPublishDate",
+            "dataType": "float"
+        },
+        {
+            "id" : "newDeaths28DaysByDeathDate",
+            "alias": "newDeaths28DaysByDeathDate",
+            "dataType": "float"
+        },  
+        {
+            "id" : "cumDeaths28DaysByDeathDate",
+            "alias": "cumDeaths28DaysByDeathDate",
+            "dataType": "float"
+        }, 
+        {
+            "id" : "cumDeaths28DaysByDeathDateRate",
+            "alias": "cumDeaths28DaysByDeathDateRate",
+            "dataType": "float"
+        }
+    ],      
+    "utlaLtla" : [
+        {
+            "id" : "date",
+            "dataType": "date"
+        }, 
+        {
+            "id" : "newCases",
+            "alias": "newCases",
+            "dataType": "float"
+        },
+        {
+            "id" : "areaType",
+            "alias": "areaType",
+            "dataType": "string"
+        },
+        {
+            "id" : "areaName",
+            "alias": "areaName",
+            "dataType": "string"
+        }, 
+        {
+            "id": "areaCode",
+            "alias": "areaCode",
+            "dataType": "string"
+        },               
+        {
+            "id": "hash",
+            "alias": "hash",
+            "dataType": "string"
+        }, 
+        {
+            "id" : "cumCasesBySpecimenDateRate",
+            "alias": "cumCasesBySpecimenDateRate",
+            "dataType": "float"
+        },
+        {
+            "id" : "cumCasesBySpecimenDate",
+            "alias": "cumCasesBySpecimenDate",
+            "dataType": "float"
+        },       
+        {
+            "id" : "newCasesBySpecimenDate",
+            "alias": "newCasesBySpecimenDate",
+            "dataType": "float"
+        },
+        {
+            "id" : "newDeaths28DaysByPublishDate",
+            "alias": "newDeaths28DaysByPublishDate",
+            "dataType": "float"
+        },  
+        {
+            "id" : "newDeaths28DaysByDeathDate",
+            "alias": "newDeaths28DaysByDeathDate",
+            "dataType": "float"
+        },    
+        {
+            "id" : "cumDeaths28DaysByPublishDate",
+            "alias": "cumDeaths28DaysByPublishDate",
+            "dataType": "float"
+        },
+        {
+            "id" : "cumDeaths28DaysByPublishDateRate",
+            "alias": "cumDeaths28DaysByPublishDateRate",
+            "dataType": "float"
+        },      
         {
             "id" : "cumDeaths28DaysByDeathDate",
             "alias": "cumDeaths28DaysByDeathDate",
