@@ -523,7 +523,22 @@
             "id" : "cumPillarFourTestsByPublishDate",
             "alias": "cumPillarFourTestsByPublishDate",
             "dataType": "float"
-        }  
+        },    
+        {
+            "id" : "newLFDTests",
+            "alias": "newLFDTests",
+            "dataType": "float"
+        },    
+        {
+            "id" : "uniqueCasePositivityBySpecimenDateRollingSum",
+            "alias": "uniqueCasePositivityBySpecimenDateRollingSum",
+            "dataType": "float"
+        },    
+        {
+            "id" : "uniquePeopleTestedBySpecimenDateRollingSum",
+            "alias": "uniquePeopleTestedBySpecimenDateRollingSum",
+            "dataType": "float"
+        }            
     ],
     "regions" : [
         {
@@ -974,7 +989,22 @@
             "id" : "cumDeaths28DaysByDeathDateRate",
             "alias": "cumDeaths28DaysByDeathDateRate",
             "dataType": "float"
-        }
+        },    
+        {
+            "id" : "newLFDTests",
+            "alias": "newLFDTests",
+            "dataType": "float"
+        },    
+        {
+            "id" : "uniqueCasePositivityBySpecimenDateRollingSum",
+            "alias": "uniqueCasePositivityBySpecimenDateRollingSum",
+            "dataType": "float"
+        },    
+        {
+            "id" : "uniquePeopleTestedBySpecimenDateRollingSum",
+            "alias": "uniquePeopleTestedBySpecimenDateRollingSum",
+            "dataType": "float"
+        }     
     ],      
     "utlaLtla" : [
         {
@@ -1050,6 +1080,21 @@
             "id" : "cumDeaths28DaysByDeathDateRate",
             "alias": "cumDeaths28DaysByDeathDateRate",
             "dataType": "float"
-        }
+        },    
+        {
+            "id" : "newLFDTests",
+            "alias": "newLFDTests",
+            "dataType": "float"
+        },    
+        {
+            "id" : "uniqueCasePositivityBySpecimenDateRollingSum",
+            "alias": "uniqueCasePositivityBySpecimenDateRollingSum",
+            "dataType": "float"
+        },    
+        {
+            "id" : "uniquePeopleTestedBySpecimenDateRollingSum",
+            "alias": "uniquePeopleTestedBySpecimenDateRollingSum",
+            "dataType": "float"
+        }     
     ]
 }

@@ -40,7 +40,7 @@
 					var endpoint = 
 						'https://api.coronavirus.data.gov.uk/v1/data?' +
 						'filters=areaType=nation;areaName=' + nationNames[n] +
-						'&structure={"newCases":"newCasesByPublishDate","areaType":"areaType","areaName":"areaName","areaCode":"areaCode","date":"date","hash":"hash","cumCasesBySpecimenDateRate":"cumCasesBySpecimenDateRate","newCasesBySpecimenDate":"newCasesBySpecimenDate","cumCasesBySpecimenDateRate":"cumCasesBySpecimenDateRate","cumCasesBySpecimenDate":"cumCasesBySpecimenDate","maleCases":"maleCases","femaleCases":"femaleCases","newPillarOneTestsByPublishDate":"newPillarOneTestsByPublishDate","cumPillarOneTestsByPublishDate":"cumPillarOneTestsByPublishDate","newPillarTwoTestsByPublishDate":"newPillarTwoTestsByPublishDate","cumPillarTwoTestsByPublishDate":"cumPillarTwoTestsByPublishDate","newPillarThreeTestsByPublishDate":"newPillarThreeTestsByPublishDate","cumPillarThreeTestsByPublishDate":"cumPillarThreeTestsByPublishDate","newPillarFourTestsByPublishDate":"newPillarFourTestsByPublishDate","cumPillarFourTestsByPublishDate":"cumPillarFourTestsByPublishDate","newAdmissions":"newAdmissions","cumAdmissions":"cumAdmissions","cumAdmissionsByAge":"cumAdmissionsByAge","cumTestsByPublishDate":"cumTestsByPublishDate","newTestsByPublishDate":"newTestsByPublishDate","covidOccupiedMVBeds":"covidOccupiedMVBeds","hospitalCases":"hospitalCases","plannedCapacityByPublishDate":"plannedCapacityByPublishDate","newDeaths28DaysByPublishDate":"newDeaths28DaysByPublishDate","cumDeaths28DaysByPublishDate":"cumDeaths28DaysByPublishDate","cumDeaths28DaysByPublishDateRate":"cumDeaths28DaysByPublishDateRate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDateRate":"cumDeaths28DaysByDeathDateRate"}'
+						'&structure={"newCases":"newCasesByPublishDate","areaType":"areaType","areaName":"areaName","areaCode":"areaCode","date":"date","hash":"hash","cumCasesBySpecimenDateRate":"cumCasesBySpecimenDateRate","newCasesBySpecimenDate":"newCasesBySpecimenDate","cumCasesBySpecimenDateRate":"cumCasesBySpecimenDateRate","cumCasesBySpecimenDate":"cumCasesBySpecimenDate","maleCases":"maleCases","femaleCases":"femaleCases","newPillarOneTestsByPublishDate":"newPillarOneTestsByPublishDate","cumPillarOneTestsByPublishDate":"cumPillarOneTestsByPublishDate","newPillarTwoTestsByPublishDate":"newPillarTwoTestsByPublishDate","cumPillarTwoTestsByPublishDate":"cumPillarTwoTestsByPublishDate","newPillarThreeTestsByPublishDate":"newPillarThreeTestsByPublishDate","cumPillarThreeTestsByPublishDate":"cumPillarThreeTestsByPublishDate","newPillarFourTestsByPublishDate":"newPillarFourTestsByPublishDate","cumPillarFourTestsByPublishDate":"cumPillarFourTestsByPublishDate","newAdmissions":"newAdmissions","cumAdmissions":"cumAdmissions","cumAdmissionsByAge":"cumAdmissionsByAge","cumTestsByPublishDate":"cumTestsByPublishDate","newTestsByPublishDate":"newTestsByPublishDate","covidOccupiedMVBeds":"covidOccupiedMVBeds","hospitalCases":"hospitalCases","plannedCapacityByPublishDate":"plannedCapacityByPublishDate","newDeaths28DaysByPublishDate":"newDeaths28DaysByPublishDate","cumDeaths28DaysByPublishDate":"cumDeaths28DaysByPublishDate","cumDeaths28DaysByPublishDateRate":"cumDeaths28DaysByPublishDateRate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDateRate":"cumDeaths28DaysByDeathDateRate","newLFDTests":"newLFDTests","uniqueCasePositivityBySpecimenDateRollingSum":"uniqueCasePositivityBySpecimenDateRollingSum","uniquePeopleTestedBySpecimenDateRollingSum":"uniquePeopleTestedBySpecimenDateRollingSum"}'
 					;
 					$.getJSON(endpoint, function(resp) {
 						var feat = resp.data,
@@ -154,7 +154,10 @@
 								"cumDeaths28DaysByPublishDateRate": feat[i].cumDeaths28DaysByPublishDateRate,	
 								"newDeaths28DaysByDeathDate": feat[i].newDeaths28DaysByDeathDate,
 								"cumDeaths28DaysByDeathDate": feat[i].cumDeaths28DaysByDeathDate,
-								"cumDeaths28DaysByDeathDateRate": feat[i].cumDeaths28DaysByDeathDateRate																																									
+								"cumDeaths28DaysByDeathDateRate": feat[i].cumDeaths28DaysByDeathDateRate,
+								"newLFDTests": feat[i].newLFDTests,
+								"uniqueCasePositivityBySpecimenDateRollingSum": feat[i].uniqueCasePositivityBySpecimenDateRollingSum,
+								"uniquePeopleTestedBySpecimenDateRollingSum": feat[i].uniquePeopleTestedBySpecimenDateRollingSum
 							});
 						}
 						
@@ -189,7 +192,10 @@
 						'"cumDeaths28DaysByPublishDateRate":"cumDeaths28DaysByPublishDateRate",' +
 						'"newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate",' +
 						'"cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate",' +
-						'"cumDeaths28DaysByDeathDateRate":"cumDeaths28DaysByDeathDateRate"}'
+						'"cumDeaths28DaysByDeathDateRate":"cumDeaths28DaysByDeathDateRate",'+
+						'"newLFDTests":"newLFDTests",'+
+						'"uniqueCasePositivityBySpecimenDateRollingSum":"uniqueCasePositivityBySpecimenDateRollingSum",'+
+						'"uniquePeopleTestedBySpecimenDateRollingSum":"uniquePeopleTestedBySpecimenDateRollingSum"}'
 					;
 					$.getJSON(endpoint, function(resp) {
 						var feat = resp.data,
@@ -211,7 +217,10 @@
 								"cumDeaths28DaysByPublishDate": feat[i].cumDeaths28DaysByPublishDate,
 								"cumDeaths28DaysByPublishDateRate": feat[i].cumDeaths28DaysByPublishDateRate,
 								"cumDeaths28DaysByDeathDate": feat[i].cumDeaths28DaysByDeathDate,
-								"cumDeaths28DaysByDeathDateRate": feat[i].cumDeaths28DaysByDeathDateRate																																							
+								"cumDeaths28DaysByDeathDateRate": feat[i].cumDeaths28DaysByDeathDateRate,
+								"newLFDTests": feat[i].newLFDTests,
+								"uniqueCasePositivityBySpecimenDateRollingSum": feat[i].uniqueCasePositivityBySpecimenDateRollingSum,
+								"uniquePeopleTestedBySpecimenDateRollingSum": feat[i].uniquePeopleTestedBySpecimenDateRollingSum																																							
 							});
 						}
 						
@@ -243,7 +252,10 @@
 					'"cumDeaths28DaysByPublishDateRate":"cumDeaths28DaysByPublishDateRate",' +
 					'"newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate",' +
 					'"cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate",' +
-					'"cumDeaths28DaysByDeathDateRate":"cumDeaths28DaysByDeathDateRate"}'
+					'"cumDeaths28DaysByDeathDateRate":"cumDeaths28DaysByDeathDateRate",'+
+					'"newLFDTests":"newLFDTests",'+
+					'"uniqueCasePositivityBySpecimenDateRollingSum":"uniqueCasePositivityBySpecimenDateRollingSum",'+
+					'"uniquePeopleTestedBySpecimenDateRollingSum":"uniquePeopleTestedBySpecimenDateRollingSum"}'
 					;
 					$.getJSON(endpoint, function(resp) {
 						var feat = resp.data,
@@ -265,7 +277,10 @@
 								"cumDeaths28DaysByPublishDate": feat[i].cumDeaths28DaysByPublishDate,
 								"cumDeaths28DaysByPublishDateRate": feat[i].cumDeaths28DaysByPublishDateRate,
 								"cumDeaths28DaysByDeathDate": feat[i].cumDeaths28DaysByDeathDate,
-								"cumDeaths28DaysByDeathDateRate": feat[i].cumDeaths28DaysByDeathDateRate																																								
+								"cumDeaths28DaysByDeathDateRate": feat[i].cumDeaths28DaysByDeathDateRate,
+								"newLFDTests": feat[i].newLFDTests,
+								"uniqueCasePositivityBySpecimenDateRollingSum": feat[i].uniqueCasePositivityBySpecimenDateRollingSum,
+								"uniquePeopleTestedBySpecimenDateRollingSum": feat[i].uniquePeopleTestedBySpecimenDateRollingSum																																								
 							});
 						}
 						
@@ -286,7 +301,7 @@
 					var endpoint = 
 						'https://api.coronavirus.data.gov.uk/v1/data?' +
 						'filters=areaType=region;areaName=' + regionNames[r] +
-						'&structure={"newCases":"newCasesByPublishDate","areaType":"areaType","areaName":"areaName","areaCode":"areaCode","date":"date","hash":"hash","cumCasesBySpecimenDateRate":"cumCasesBySpecimenDateRate","newCasesBySpecimenDate":"newCasesBySpecimenDate","cumCasesBySpecimenDateRate":"cumCasesBySpecimenDateRate","cumCasesBySpecimenDate":"cumCasesBySpecimenDate","maleCases":"maleCases","femaleCases":"femaleCases","newPillarOneTestsByPublishDate":"newPillarOneTestsByPublishDate","cumPillarOneTestsByPublishDate":"cumPillarOneTestsByPublishDate","newPillarTwoTestsByPublishDate":"newPillarTwoTestsByPublishDate","cumPillarTwoTestsByPublishDate":"cumPillarTwoTestsByPublishDate","newPillarThreeTestsByPublishDate":"newPillarThreeTestsByPublishDate","cumPillarThreeTestsByPublishDate":"cumPillarThreeTestsByPublishDate","newPillarFourTestsByPublishDate":"newPillarFourTestsByPublishDate","cumPillarFourTestsByPublishDate":"cumPillarFourTestsByPublishDate","newAdmissions":"newAdmissions","cumAdmissions":"cumAdmissions","cumAdmissionsByAge":"cumAdmissionsByAge","cumTestsByPublishDate":"cumTestsByPublishDate","newTestsByPublishDate":"newTestsByPublishDate","covidOccupiedMVBeds":"covidOccupiedMVBeds","hospitalCases":"hospitalCases","plannedCapacityByPublishDate":"plannedCapacityByPublishDate","newDeaths28DaysByPublishDate":"newDeaths28DaysByPublishDate","cumDeaths28DaysByPublishDate":"cumDeaths28DaysByPublishDate","cumDeaths28DaysByPublishDateRate":"cumDeaths28DaysByPublishDateRate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDateRate":"cumDeaths28DaysByDeathDateRate"}'
+						'&structure={"newCases":"newCasesByPublishDate","areaType":"areaType","areaName":"areaName","areaCode":"areaCode","date":"date","hash":"hash","cumCasesBySpecimenDateRate":"cumCasesBySpecimenDateRate","newCasesBySpecimenDate":"newCasesBySpecimenDate","cumCasesBySpecimenDateRate":"cumCasesBySpecimenDateRate","cumCasesBySpecimenDate":"cumCasesBySpecimenDate","maleCases":"maleCases","femaleCases":"femaleCases","newPillarOneTestsByPublishDate":"newPillarOneTestsByPublishDate","cumPillarOneTestsByPublishDate":"cumPillarOneTestsByPublishDate","newPillarTwoTestsByPublishDate":"newPillarTwoTestsByPublishDate","cumPillarTwoTestsByPublishDate":"cumPillarTwoTestsByPublishDate","newPillarThreeTestsByPublishDate":"newPillarThreeTestsByPublishDate","cumPillarThreeTestsByPublishDate":"cumPillarThreeTestsByPublishDate","newPillarFourTestsByPublishDate":"newPillarFourTestsByPublishDate","cumPillarFourTestsByPublishDate":"cumPillarFourTestsByPublishDate","newAdmissions":"newAdmissions","cumAdmissions":"cumAdmissions","cumAdmissionsByAge":"cumAdmissionsByAge","cumTestsByPublishDate":"cumTestsByPublishDate","newTestsByPublishDate":"newTestsByPublishDate","covidOccupiedMVBeds":"covidOccupiedMVBeds","hospitalCases":"hospitalCases","plannedCapacityByPublishDate":"plannedCapacityByPublishDate","newDeaths28DaysByPublishDate":"newDeaths28DaysByPublishDate","cumDeaths28DaysByPublishDate":"cumDeaths28DaysByPublishDate","cumDeaths28DaysByPublishDateRate":"cumDeaths28DaysByPublishDateRate","newDeaths28DaysByDeathDate":"newDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDate":"cumDeaths28DaysByDeathDate","cumDeaths28DaysByDeathDateRate":"cumDeaths28DaysByDeathDateRate","newLFDTests":"newLFDTests","uniqueCasePositivityBySpecimenDateRollingSum":"uniqueCasePositivityBySpecimenDateRollingSum","uniquePeopleTestedBySpecimenDateRollingSum":"uniquePeopleTestedBySpecimenDateRollingSum"}'
 					;
 					$.getJSON(endpoint, function(resp) {
 						var feat = resp.data,
@@ -400,7 +415,10 @@
 								"cumDeaths28DaysByPublishDateRate": feat[i].cumDeaths28DaysByPublishDateRate,	
 								"newDeaths28DaysByDeathDate": feat[i].newDeaths28DaysByDeathDate,
 								"cumDeaths28DaysByDeathDate": feat[i].cumDeaths28DaysByDeathDate,
-								"cumDeaths28DaysByDeathDateRate": feat[i].cumDeaths28DaysByDeathDateRate																																									
+								"cumDeaths28DaysByDeathDateRate": feat[i].cumDeaths28DaysByDeathDateRate,
+								"newLFDTests": feat[i].newLFDTests,
+								"uniqueCasePositivityBySpecimenDateRollingSum": feat[i].uniqueCasePositivityBySpecimenDateRollingSum,
+								"uniquePeopleTestedBySpecimenDateRollingSum": feat[i].uniquePeopleTestedBySpecimenDateRollingSum																																									
 							});
 						}
 						
